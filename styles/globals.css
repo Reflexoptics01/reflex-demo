@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@media print
+{    
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+@media print {
+  #sticker {
+    zoom: 60%;
+ }
+  #main {position:relative; padding:0; top:0; height:1px; overflow:visible;}
+   #printarea {position:absolute; top:0; padding:0; margin:-1px;}
+   .pagebreak { page-break-before: always; }
+   .noprint {
+    visibility: hidden;
+    height: 0;
+ }
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.pagination {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  cursor: pointer;
+}
+.page{
+  size: 3in 4in;
+}
+.table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  /*Remove all the outside
+  borders of the existing table*/
+}
+.table td {
+  padding: 0.2rem;
+  border: 1px solid black;
+}
+.table th {
+  padding: 0.3rem;
+  border: 1px solid black;
+}
+#nob{
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-left: 0;
+  border-right: 0;
+}
+
+.pagination a:hover {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ffff;
+  color: #ffff;
+  background-color: #5145cd;
+}
+
+.page-link {
+  font-weight: bold;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #5145cd;
+  color: #5145cd;
+}
+
+.page-link--active a {
+  color: #fff;
+  background: #5145cd;
+}
+
+
+.pagination__link--disabled a {
+  color: rgb(198, 197, 202);
+  border: 1px solid rgb(198, 197, 202);
+}
